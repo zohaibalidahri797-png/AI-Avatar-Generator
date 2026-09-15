@@ -1,0 +1,16 @@
+name = "ai-avatar-generator"
+type = "javascript"
+account_id = ""
+workers_dev = true
+main = "src/index.js"
+compatibility_date = "2024-01-01"
+
+[build]
+command = "npm install"
+
+[env.production]
+vars = { ENVIRONMENT = "production" }
+
+# Uncomment and configure if you have a custom domain
+# route = "example.com/*"
+# zone_id = ""
