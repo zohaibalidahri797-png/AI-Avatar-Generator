@@ -1,0 +1,41 @@
+{
+  // Cloudflare Workers configuration for the vinext build.
+  // Docs: DEPLOYMENT.md — `bun run build:vinext` produces dist/server/wrangler.json
+  // which `bun run start:vinext` (local preview) and `bun run deploy:vinext` use.
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "avatarforge",
+  "compatibility_date": "2026-09-12",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "main": "vinext/server/fetch-handler",
+  "assets": {
+    "directory": "dist/client",
+    "not_found_handling": "none",
+    "binding": "ASSETS"
+  },
+  "cache": {
+    "enabled": true
+  },
+  "version_metadata": {
+    "binding": "CF_VERSION_METADATA"
+  },
+  "images": {
+    "binding": "IMAGES"
+  },
+  "kv_namespaces": [
+    {
+      // REQUIRED BEFORE DEPLOY: run `npx wrangler kv namespace create VINEXT_KV_CACHE`
+      // and replace the placeholder id below with the returned real namespace id.
+      // The value must be 32 hex characters; the dummy below only satisfies
+      // LOCAL preview (wrangler dev simulates KV locally and ignores the id).
+      "binding": "VINEXT_KV_CACHE",
+      "id": "00000000000000000000000000000000"
+    }
+  ]
+  // Secrets (never committed — set with `npx wrangler secret put …`):
+  //   ZAI_API_KEY   — AI provider API key used by /api/generate-avatar (server-only)
+  //   ZAI_BASE_URL  — AI provider base URL (server-only)
+  // Public vars (set in [vars] or the Cloudflare dashboard):
+  //   NEXT_PUBLIC_SITE_URL, NEXT_PUBLIC_SUPPORT_EMAIL
+}

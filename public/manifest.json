@@ -1,0 +1,32 @@
+{
+  "id": "/",
+  "name": "AvatarForge — Free AI Avatar Generator",
+  "short_name": "AvatarForge",
+  "description": "Create free AI avatars, profile pictures, PFPs, portraits and professional headshots from your photo. 28+ styles, no signup required.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#faf9fe",
+  "theme_color": "#8b2fd6",
+  "categories": ["photo", "graphics", "utilities"],
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
