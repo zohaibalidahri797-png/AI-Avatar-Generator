@@ -1,0 +1,5 @@
+[build]
+  # This repository has no package.json or generated build output.
+  # Keep an explicit no-op here to override the invalid command set in the UI.
+  command = "true"
+  publish = "."
