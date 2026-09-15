@@ -1,0 +1,16 @@
+{
+  "name": "ai-avatar-generator",
+  "version": "1.0.0",
+  "description": "AI Avatar Generator using Cloudflare Workers",
+  "main": "src/index.js",
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev"
+  },
+  "keywords": ["ai", "avatar", "generator"],
+  "author": "zohaibalidahri797-png",
+  "license": "MIT",
+  "devDependencies": {
+    "wrangler": "^4.131.2"
+  }
+}
