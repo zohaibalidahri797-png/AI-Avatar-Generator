@@ -1,0 +1,15 @@
+# Copy this file to `.dev.vars` (gitignored) for local Workers preview.
+# `.dev.vars` is loaded automatically by `bun run start:vinext` (wrangler dev).
+# NEVER commit the real file — these are server-side secrets.
+
+# Required — AI provider credentials used by /api/generate-avatar
+ZAI_BASE_URL=https://your-provider-endpoint/v1
+ZAI_API_KEY=your-secret-api-key
+
+# Optional — only if your provider requires the additional auth headers
+# ZAI_TOKEN=your-jwt-token
+# ZAI_CHAT_ID=your-chat-id
+# ZAI_USER_ID=your-user-id
+
+# NEXT_PUBLIC_SITE_URL is a BUILD-TIME variable: set it in the shell when
+# running `bun run build:vinext`, not here.
